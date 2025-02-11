@@ -17,9 +17,9 @@ Route::get('/about',  function () {
         3 => 'sales'
     ];
 
-    return view('about', ['name' => $name, 'd' => $d]);
+    // return view('about', ['name' => $name, 'd' => $d]);
     // return view('about')->with('name', $name);
-    // return view(view: 'about', data: compact(var_name: 'name'));
+    return view('about', data: compact('name', 'd'));
 });
 
 Route::post('/about',  function () {
@@ -29,8 +29,10 @@ Route::post('/about',  function () {
         2 => 'Financial',
         3 => 'sales'
     ];
-    return view('about', ['name' => $name, 'd' => $d]);
+    // return view('about', ['name' => $name, 'd' => $d]);
     // return view('about', ['name' => $name]);
     // return view('about')->with('name', $name);
-    // return view(view: 'about', data: compact(var_name: 'name'));
+    return view('about', data: compact('name', 'd'));
+
+   
 });
